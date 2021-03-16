@@ -67,7 +67,24 @@ def print_as_numbered_list(items):
 
 
 def get_range(start, stop):
-    pass  # TODO: replace this line with your code
+    """Return a list of numbers in a certain range.
+
+    For example:
+
+    >>> get_range(0, 5)
+    [0, 1, 2, 3, 4]
+
+    >>> get_range(1, 3)
+    [1, 2]
+    """
+
+    nums = []
+    num = start
+    for num in range(start, stop):
+        if num < stop:
+            nums.append(num)
+            num +=1
+    return nums
 
 
 def censor_vowels(word):
