@@ -6,10 +6,10 @@ def output_all_items(items):
 
     For example:
 
-    >>> output_all_items([1, 'hello', true])
+    >>> output_all_items([1, 'hello', True])
     1
     hello
-    true
+    True
     """
 
     for item in items:
@@ -17,12 +17,12 @@ def output_all_items(items):
 
 def get_all_evens(nums):
     """Given a list of integers, return all that are even numbers.
-    
+
     For example:
 
-    >>> getAllEvens([7, 8, 10, 1, 2, 2])
-    [8, 2, 2]
-    """    
+    >>> get_all_evens([7, 8, 10, 1, 2, 2])
+    [8, 10, 2, 2]
+    """
 
     evenNums = []
     for num in nums:
@@ -30,12 +30,40 @@ def get_all_evens(nums):
             evenNums.append(num)
     return evenNums
 
+###### COME BACK
+
 def get_odd_indices(items):
-    pass  # TODO: replace this line with your code
+    """Get all odd indices from a list.
+
+    For example:
+
+    >>> get_odd_indices([1, 'hello', True, 500])
+    ['hello', 500]
+    """
+
+    result = []
+
+    for index in items:
+        if index % 2 != 0:
+            result.append(items[index])
+    return result
 
 
 def print_as_numbered_list(items):
-    pass  # TODO: replace this line with your code
+    """Given an list, output a numbered list
+
+    For example:
+
+    >>> print_as_numbered_list([1, 'hello', True])
+    1. 1
+    2. hello
+    3. True
+    """
+
+    count = 1
+    for i in items:
+        print(f"{count}. {i}")
+        count += 1
 
 
 def get_range(start, stop):

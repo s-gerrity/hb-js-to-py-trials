@@ -18,7 +18,7 @@ function outputAllItems(items) {
 //
 // Ex.:
 //   > getAllEvens([7, 8, 10, 1, 2, 2]);
-//   [8, 2, 2]
+//   [8, 10, 2, 2]
 function getAllEvens(nums) {
   const evenNums = [];
 
@@ -38,14 +38,19 @@ function getAllEvens(nums) {
 //   > getOddIndices([1, 'hello', true, 500]);
 //   ['hello', 500]
 function getOddIndices(items) {
+
+  // make an empty array
   const result = [];
 
+  // for the index of each item in an array
   for (const idx in items) {
+    //  if the index is not divisible by 2
     if (idx % 2 !== 0) {
+
+      // then add the value to the result list
       result.push(items[idx]);
     }
   }
-
   return result;
 }
 
